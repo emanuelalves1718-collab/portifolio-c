@@ -1,0 +1,207 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetArena | Esportes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="aviso">
+    PROJETO DEMONSTRATIVO • COTAÇÕES FICTÍCIAS
+  </div>
+
+  <header class="header">
+    <a href="#" class="logo">B <span>BETARENA</span></a>
+
+    <button class="menu" id="menu">☰</button>
+
+    <nav id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#jogos">Esportes</a>
+      <a href="#destaques">Destaques</a>
+    </nav>
+
+    <button class="btn" id="entrar">Entrar</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <p class="tag">A EMOÇÃO DO ESPORTE</p>
+        <h1>Viva cada lance.<br>
+          <span>Sinta a arena.</span>
+        </h1>
+        <p class="descricao">
+          Acompanhe partidas, explore confrontos e descubra
+          uma experiência esportiva moderna.
+        </p>
+        <a class="btn principal" href="#jogos">
+          Explorar partidas →
+        </a>
+      </div>
+
+      <div class="destaque">
+        <p>⚽ PARTIDA EM DESTAQUE</p>
+        <span class="ao-vivo">● AO VIVO — DEMO</span>
+
+        <div class="placar">
+          <div>
+            <div class="escudo azul">BA</div>
+            <p>Blue Athletic</p>
+          </div>
+
+          <strong>2 <small>:</small> 1</strong>
+
+          <div>
+            <div class="escudo laranja">FC</div>
+            <p>Fire Club</p>
+          </div>
+        </div>
+
+        <div class="barra"><span></span></div>
+        <small>Partida fictícia para demonstração</small>
+      </div>
+    </section>
+
+    <section id="jogos" class="jogos">
+      <p class="tag">ACOMPANHE A AÇÃO</p>
+      <h2>Partidas em destaque</h2>
+
+      <div class="filtros">
+        <button class="filtro ativo" data-esporte="Todos">Todos</button>
+        <button class="filtro" data-esporte="Futebol">⚽ Futebol</button>
+        <button class="filtro" data-esporte="Basquete">🏀 Basquete</button>
+        <button class="filtro" data-esporte="Tênis">🎾 Tênis</button>
+      </div>
+
+      <input
+        id="busca"
+        type="search"
+        placeholder="Buscar time..."
+        aria-label="Buscar time"
+      >
+
+      <div class="grade" id="grade">
+
+        <article class="card" data-esporte="Futebol"
+          data-times="blue athletic fire club">
+          <div class="card-top">
+            <span>⚽ FUTEBOL</span>
+            <span class="ao-vivo">● AO VIVO</span>
+          </div>
+          <p class="liga">Liga demonstrativa</p>
+
+          <div class="times">
+            <div><b class="escudo azul">BA</b><p>Blue Athletic</p></div>
+            <strong>2 - 1</strong>
+            <div><b class="escudo laranja">FC</b><p>Fire Club</p></div>
+          </div>
+
+          <p class="mercado">RESULTADO FINAL</p>
+          <div class="odds">
+            <button class="odd" data-selecao="Blue Athletic vence" data-odd="1.85">
+              <small>1</small><b>1.85</b>
+            </button>
+            <button class="odd" data-selecao="Empate Blue Athletic x Fire Club" data-odd="3.20">
+              <small>X</small><b>3.20</b>
+            </button>
+            <button class="odd" data-selecao="Fire Club vence" data-odd="4.10">
+              <small>2</small><b>4.10</b>
+            </button>
+          </div>
+        </article>
+
+        <article class="card" data-esporte="Basquete"
+          data-times="wolves knights basquete">
+          <div class="card-top">
+            <span>🏀 BASQUETE</span>
+            <span class="status">DEMO</span>
+          </div>
+          <p class="liga">Copa urbana fictícia</p>
+
+          <div class="times">
+            <div><b class="escudo roxo">WC</b><p>Wolves</p></div>
+            <strong>78 - 72</strong>
+            <div><b class="escudo vermelho">KN</b><p>Knights</p></div>
+          </div>
+
+          <p class="mercado">VENCEDOR DA PARTIDA</p>
+          <div class="odds duas">
+            <button class="odd" data-selecao="Wolves vence" data-odd="1.65">
+              <small>Wolves</small><b>1.65</b>
+            </button>
+            <button class="odd" data-selecao="Knights vence" data-odd="2.25">
+              <small>Knights</small><b>2.25</b>
+            </button>
+          </div>
+        </article>
+
+        <article class="card" data-esporte="Tênis"
+          data-times="ana lima bia costa tênis">
+          <div class="card-top">
+            <span>🎾 TÊNIS</span>
+            <span class="status">DEMO</span>
+          </div>
+          <p class="liga">Open de exibição</p>
+
+          <div class="times">
+            <div><b class="escudo verde">AL</b><p>Ana Lima</p></div>
+            <strong>1 - 0</strong>
+            <div><b class="escudo amarelo">BC</b><p>Bia Costa</p></div>
+          </div>
+
+          <p class="mercado">VENCEDORA DA PARTIDA</p>
+          <div class="odds duas">
+            <button class="odd" data-selecao="Ana Lima vence" data-odd="1.72">
+              <small>Ana Lima</small><b>1.72</b>
+            </button>
+            <button class="odd" data-selecao="Bia Costa vence" data-odd="2.05">
+              <small>Bia Costa</small><b>2.05</b>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="semResultado" hidden>Nenhuma partida encontrada.</p>
+    </section>
+
+    <section class="responsabilidade" id="destaques">
+      <h2>Esporte com responsabilidade</h2>
+      <p>
+        Este é um projeto de portfólio. Não existem apostas reais,
+        depósitos, saques ou pagamentos. As partidas e cotações são fictícias.
+        Serviços reais devem cumprir a legislação aplicável e as restrições
+        de idade.
+      </p>
+      <strong>18+ • Jogue com responsabilidade.</strong>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">B <span>BETARENA</span></a>
+    <p>Projeto de portfólio • Emanuel • 2026</p>
+  </footer>
+
+  <aside class="bilhete" id="bilhete">
+    <button class="fechar" id="fechar">×</button>
+    <p class="tag">SELEÇÃO DEMONSTRATIVA</p>
+    <h2>Meu bilhete</h2>
+    <div id="selecaoAtual">
+      <p>Selecione uma cotação para visualizar aqui.</p>
+    </div>
+    <button class="btn principal" id="confirmar">
+      Testar interação
+    </button>
+    <small>Nenhuma aposta real será realizada.</small>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
